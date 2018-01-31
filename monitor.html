@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>tomtalk monitor</title> 
+<style>
+body {
+    font-family: "Microsoft Yahei","Helvetica Neue","Luxi Sans","DejaVu Sans",Tahoma,"Hiragino Sans GB","STHeiti" !important;
+    font-size: 1em;
+}
+
+.goaccess-report {
+    color: #08C;
+    display: inline-block;
+    height: 1.9em;
+    line-height: 1.8em;
+    margin: 0 .3em .6em 0;
+    text-align: center;
+    width: 6em;
+    text-decoration: none;
+}
+
+h3 {
+    display: inline-block;
+    margin: 0 .3em .6em 0.6em;
+}
+</style>
+</head>
+<body>
+    <div id="disk_usage" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+    <div id="access_file" style="margin: 0 auto"></div>
+</body>
+
+<script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
+<script src="/js/highcharts.js"></script>
+<script type="text/javascript">
+function disk_usage_chart(start, data) {
+    $('#disk_usage').highcharts({
+        title: { text: '磁盘使用率' },
+        xAxis: { 
+            type: 'datetime',
+            labels: { 
+            formatter: function() { 
+                    return  Highcharts.dateFormat('%m-%d %H:%M', this.value); 
+                } 
+            } 
+        },
+        yAxis: { title: { text: '使用率 (%)' } },
+        plotOptions: {
+            series: {
+                marker: {
+                    enabled: false
+                }
+            }
+        },
+        tooltip:{
+            valueSuffix: '%',
+            formatter:function(){
+            return Highcharts.dateFormat('%Y-%m-%d %H:%M',this.x) 
+                + '<br/><strong>' + this.series.name+'</strong> ' + this.y + '%';
+            }
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: 'hda1',
+            pointInterval: 3600 * 1000,  //hour
+            pointStart: Date.UTC(start[0], start[1]-1, start[2], start[3], start[4]), 
+            data: data
+        }],
+        credits:{enabled:false}
+    });
+} 
+
+function get_starttime(result) {
+    var line = result[0].split(' ');
+
+    var day  = line[0].split('-'); 
+    var hour = line[1].split(':');
+
+    return day.concat(hour);
+}
+
+function get_usage_data(result) {
+    var data = [], line = [], usage_percent = 0;
+
+    for (k in result) {
+        line = result[k].split(' '); 
+        usage_percent = (1 - (line[3] / line[2])) * 100 ; 
+        data.push(parseFloat(usage_percent.toFixed(2)));
+    } 
+
+    return data;
+}
+
+
+$(function () {
+    $.post("df.php", {suggest:''}, function(result){
+
+        disk_usage_chart(get_starttime(result), get_usage_data(result));
+
+    }, 'json'); 
+}); 
+</script> 
+</html>
