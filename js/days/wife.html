@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成功日记</title>
+    <style>
+        body {
+            font-size: 12pt;
+            line-height:1.5em;
+            margin: 0;
+            color: #333;
+            font-family: "Microsoft Yahei", "Helvetica Neue", "Luxi Sans", "DejaVu Sans", "Tahoma", "Hiragino Sans GB", "STHeiti";
+        }
+
+        .day {
+            clear: both;
+            padding: 0.5em 1em;
+            border-bottom: 1pt solid #EEEEEE;
+            cursor: pointer;
+        }
+
+        .time-work {
+            color: #fc880f;
+            font-size: 10pt;
+            font-weight: bold;
+        }
+
+        .time-sunday {
+            color: #96d678;
+            font-size: 10pt;
+            font-weight: bold;
+        }
+
+        .item-date {
+            display: inline-block;
+            width: 4ex;
+            text-align: center;
+            margin-right: 1em;
+        }
+
+        .feat {
+
+        }
+
+        #feat-textarea {
+            width: 100%;
+            clear: both;
+            font-size: 12pt;
+            line-height:1.5em;
+            border: none;
+            resize: none;
+            padding: 0;
+            margin: 0;
+            box-shadow: none;
+            border-radius: 0px;
+            outline: none;
+            color: #333;
+            font-family: "Microsoft Yahei", "Helvetica Neue", "Luxi Sans", "DejaVu Sans", "Tahoma", "Hiragino Sans GB", "STHeiti";
+        }
+
+        .menu-bar {
+            border-bottom: 1pt solid #DDDDDD;
+            padding: 0.4em 0em;
+        }
+
+        .btn {
+            text-align: center;
+            cursor: pointer;
+            color: #0579fd;
+        }
+
+        .pre-btn {
+            width: 23%;
+            display: inline-block;
+        }
+
+        .current-month {
+            display: inline-block;
+            text-align: center;
+            width: 50%;
+        }
+
+        .next-btn {
+            width: 23%;
+            display: inline-block;
+        }
+        .edit-container {
+            margin: 0.5em 0.5em;
+        }
+
+        .cancel {
+            width: 49%;
+            display: inline-block;
+
+        }
+        .save {
+            width: 49%;
+            display: inline-block;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<script type="text/x-handlebars" data-template-name="application">
+{{outlet}}
+</script>
+
+<script type="text/x-handlebars" data-template-name="index">
+    <div class="menu-bar">
+        <span class='btn pre-btn' {{action 'preWeek'}}>上星期</span>
+        <span class='current-month' id='title_day'></span>
+        <span class='btn next-btn' {{action 'nextWeek'}}>下星期</span>
+    </div>
+
+    {{#each item in model itemController="item"}}
+      <div class="day" {{action 'click'}}>
+        <div class="{{getTimeClass item.time}}">
+            <span class="item-date">{{getDate item.time}}</span> {{getWeek item.time}}
+        </div>
+
+        <div class="feat">
+           {{{toHtml item.feat}}}
+        </div>
+      </div>
+    {{/each}}
+</script>
+
+<script type="text/x-handlebars" data-template-name="detail">
+    <div class="menu-bar">
+        <span class="btn cancel" {{action 'cancel'}}>取消</span>
+        <span class="btn save" {{action 'save'}}>保存</span>
+    </div>
+
+    <div class="edit-container">
+        {{textarea id="feat-textarea" value=feat}}
+    </div>
+</script>
+
+<!-- jquery2，在微信中出不来页面，所以用低版本jquery -->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/ember/libs/ember-template-compiler.js"></script>
+<script src="/js/ember/libs/ember.min.js"></script>
+<script src="/js/ember/libs/ember-data.js"></script>
+<script src="/js/jquery.autosize.min.js"></script>
+<script src="/js/bounce.min.js"></script>
+<script src="/js/moment.js"></script>
+<script src="/js/fastclick.js"></script>
+<script src="/js/days/wife.js"></script>
+</body>
+</html>

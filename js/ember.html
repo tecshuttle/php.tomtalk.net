@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ember Todo</title>
+    <style>
+        body {
+            font-size: 16px;
+            width: 1000px;
+            margin: 20px auto;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        .completed {
+            color: red;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a.active {
+            color: red;
+        }
+        #category-list p{
+            line-height: 26px;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+
+<body></body>
+
+<script type="text/x-handlebars" id="index">
+    <br/>
+    {{
+        input
+        type="text"
+        id="new-todo"
+        placeholder="What needs to be done?"
+        value=newTitle
+        action="createTodo"
+    }}
+
+    <ul>
+    {{#each item in model}}
+      <li {{bind-attr class="item.isCompleted:completed"}} {{action "click" item on="click"}}>
+      {{item.title}}
+      </li>
+    {{/each}}
+    </ul>
+
+</script>
+
+<script type="text/x-handlebars" id="list">
+    <p {{action "pClick" on="click"}}>list</p>
+    <button {{action "btnClick"}} class="destroy">Button</button>
+
+</script>
+
+<script type="text/x-handlebars" id="cat/index">
+    <button {{action "new"}} >New</button>
+
+    <div id="category-list">
+    {{#each item in model}}
+      <p>{{#link-to 'cat.edit' item.id}}{{item.name}}{{/link-to}}
+    {{/each}}
+    <div>
+</script>
+
+<script type="text/x-handlebars" id="cat/edit">
+    <p>名称：{{input valueBinding="name"}}
+    <p>级别：{{input valueBinding="priority"}}
+    <p>颜色：{{input valueBinding="color"}}
+
+    <p>{{#link-to 'cat'}}Return{{/link-to}}
+    <button {{action "save" this}} >Save</button>
+</script>
+
+<script type="text/x-handlebars" id="tag">
+    <p>tag
+</script>
+
+<script type="text/x-handlebars" id="memo/index">
+    <p {{action "click" on="click"}}>memo
+    <p>{{#link-to 'memo.edit'}}Edit{{/link-to}}
+
+</script>
+
+<script type="text/x-handlebars" id="memo/edit">
+    <p {{action "click" on="click"}}>Edit
+    <p>{{#link-to 'memo'}}Return{{/link-to}}
+
+</script>
+
+<script type="text/x-handlebars" id="blog">
+    <p>blog
+
+</script>
+
+<script type="text/x-handlebars" id="book">
+    <p>book
+
+</script>
+
+<!-- jquery2，在微信中出不来页面，所以用低版本jquery -->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/ember/libs/handlebars-v2.0.0.js"></script>
+<script src="/js/ember/libs/ember.min.js"></script>
+<script src="/js/ember/libs/ember-data.js"></script>
+<script src="/js/ember/app.js"></script>
+<script src="/js/ember/category.js"></script>
+
+
+</html>

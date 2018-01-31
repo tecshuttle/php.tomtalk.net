@@ -521,3 +521,20 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
+
+//customer's configure
+$config['css_js_version'] = '16';
+
+
+$config['smtp'] = array(
+    'protocol' => 'smtp',
+    'smtp_host' => 'smtp.163.com',
+    'smtp_user' => 'sky007_tom',
+    'email' => 'sky007_tom@163.com',   //自己添加的配置项
+    'smtp_pass' => '100Hacker',
+    'smtp_port' => 25,
+    'smtp_timeout' => 5,
+    'charset' => 'utf-8',
+    'wordwrap' => TRUE,
+    'mailtype' => 'html'
+);

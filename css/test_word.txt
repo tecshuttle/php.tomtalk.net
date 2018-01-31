@@ -1,0 +1,14 @@
+至少匹配3个字母
+to i md ab
+
+过虑数字
+tom3 667 12tom tom2 tom2tom 123 c281 c355 c37
+
+忽略字母大小写
+BooK BOOK Book BooK book
+
+匹配示例：简单词
+What the mother
+
+匹配示例：合成词
+baby-to

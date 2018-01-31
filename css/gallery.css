@@ -1,0 +1,120 @@
+#toolBar {
+    padding: 5px;
+    background-color: white;
+    width: 100%;
+    border-bottom: 1px solid #aaa;
+}
+
+#toolBar div.form-group, div.checkbox, label {
+    margin-right: 1em;
+}
+
+#Gallery {
+
+}
+
+@media screen and (max-width: 449px) {
+    #GalleryList {
+        width: 210px;
+        margin: 0px auto;
+        padding-top: 240px;
+    }
+}
+
+@media screen and (min-width: 450px) and (max-width: 664px) {
+    #GalleryList {
+        width: 427px;
+        margin: 0px auto;
+        padding-top: 240px;
+    }
+}
+
+@media screen and (min-width: 665px) and (max-width: 881px) {
+    #GalleryList {
+        width: 645px;
+        margin: 0px auto;
+        padding-top: 76px;
+    }
+}
+
+@media screen and (min-width: 882px) and (max-width: 1089px) {
+    #GalleryList {
+        width: 855px;
+        margin: 0px auto;
+        padding-top: 76px;
+    }
+}
+
+@media screen and (min-width: 1090px) and (max-width: 1289px) {
+    #GalleryList {
+        width: 1070px;
+        margin: 0px auto;
+        padding-top: 52px;
+    }
+}
+
+@media screen and (min-width: 1311px) and (max-width: 1512px) {
+    #GalleryList {
+        width: 1280px;
+        margin: 0px auto;
+        padding-top: 52px;
+    }
+}
+
+@media screen and (min-width: 1513px) and (max-width: 1728px) {
+    #GalleryList {
+        width: 1493px;
+        margin: 0px auto;
+        padding-top: 52px;
+    }
+}
+
+@media screen and (min-width: 1729px) and (max-width: 1919px) {
+    #GalleryList {
+        width: 1707px;
+        margin: 0px auto;
+        padding-top: 52px;
+    }
+}
+
+@media screen and (min-width: 1920px) and (max-width: 5000px) {
+    #GalleryList {
+        width: 1902px;
+        margin: 0px auto;
+        padding-top: 52px;
+    }
+}
+
+#GalleryList div.photo {
+    width: 208px;
+    display: inline-block;
+    text-align: center;
+    border: 3px solid white;
+    margin: 0px 3px 3px 0px;
+}
+
+#GalleryList div.photo img {
+    padding: 1px 0px;
+}
+
+#GalleryList div.selected {
+    background-color: #c3daf9;
+    border: 3px solid #c3daf9;
+}
+
+#GalleryList div.photo span {
+    width: 200px;
+    overflow: hidden;
+    margin: 5px 0px;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+div#Gallery div.big-view-photo {
+    text-align: center;
+}
+
+div#Gallery div.big-view-photo img {
+    max-width: 100%;
+}

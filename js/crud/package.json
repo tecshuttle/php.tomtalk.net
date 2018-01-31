@@ -1,0 +1,15 @@
+{
+  "name": "Your-Name-App-Hiphenated",
+  "description": "Write what u want",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "uglify-js": "^2.4.19"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-uglify": "^0.8.1",
+    "grunt-contrib-watch": "~0.4.4",
+    "grunt-ember-templates": "*"
+  }
+}

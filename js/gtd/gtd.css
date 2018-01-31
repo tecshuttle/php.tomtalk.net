@@ -1,0 +1,52 @@
+
+body {
+    font-size: 12pt;
+    margin: 0;
+    font-family: "Microsoft Yahei", "Helvetica Neue", "Luxi Sans", "DejaVu Sans", "Tahoma", "Hiragino Sans GB", "STHeiti";
+}
+
+p {
+    font-size: 12pt;
+}
+
+div.menu {
+    text-align: center;
+}
+
+div.menu a {
+    text-align: center;
+    display: inline-block;
+    width: 32%;
+    padding: 0.5em 0em;
+}
+
+div#job-list {
+    margin: 0em 0.5em;
+}
+
+div#job-list > .job {
+    font-size: 12pt;
+    line-height: 2em;
+}
+
+li.job {
+    list-style: none;
+}
+
+.completed {
+    color: red;
+}
+
+a {
+    text-decoration: none;
+}
+
+a.active {
+    color: red;
+}
+
+#category-list p {
+    line-height: 26px;
+    margin: 0 auto;
+}
+

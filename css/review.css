@@ -1,0 +1,25 @@
+html, body, textarea, #editor {
+    margin: 0;
+    height: 100%;
+    font-size: 1em;
+    font-family: "Microsoft Yahei", "Helvetica Neue", "Luxi Sans", "DejaVu Sans", "Tahoma", "Hiragino Sans GB", "STHeiti";
+    color: #333;
+}
+
+img {
+    max-width: 100%;
+}
+
+#blog {
+    max-width: 50em;
+    padding: 1em;
+}
+
+h1 {
+    margin: 0.5em 0;
+}
+
+h2 {
+    margin: 0.5em 0 0.5em 0;
+    color: #333;
+}
