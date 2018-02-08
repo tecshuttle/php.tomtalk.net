@@ -1,6 +1,6 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-class todo extends CI_Controller
+class Todo extends CI_Controller
 {
     var $todo_lists = 'todo_lists';
     var $todo_projects = 'todo_projects';

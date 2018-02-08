@@ -428,7 +428,7 @@ $(function () {
     $('#project-select').change(function () {
         var project_id = $(this).val();
         if (project_id === '0') {
-            window.location.href = '/';
+            window.location.href = '/todo';
         } else {
             window.location.href = '?project_id=' + project_id;
         }

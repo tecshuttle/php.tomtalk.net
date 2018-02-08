@@ -204,7 +204,7 @@ class analyse extends CI_Controller
 
     private function get_day_report($day, $project_id)
     {
-        $all_jobs_of_week = $this->todo_lib->get_all_jobs_of_week($day, false, $project_id, $this->uid);
+        $all_jobs_of_week = $this->todo_lib->get_all_jobs_of_week($day, null, $project_id, $this->uid);
 
         //把任务按日期分组
         $list = $this->todo_lib->gather_jobs_by_day($all_jobs_of_week);

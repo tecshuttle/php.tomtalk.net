@@ -38,7 +38,7 @@ class todo_lib
         $sql = "SELECT * "
             . "FROM todo_lists "
             . "WHERE user_id = $uid AND start_time >= $week->start AND start_time <= $week->end "
-            . ($job_type_id === false ? '' : "AND job_type_id = $job_type_id ");
+            . ($job_type_id === null ? '' : "AND job_type_id = $job_type_id ");
 
         $sql .= ($project_id === '' ? '' : " AND project_id = {$project_id} ");
 

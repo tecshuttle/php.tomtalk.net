@@ -89,10 +89,11 @@
 
 <div id="container">
     <div class="top-menu">
-        <a href="//blog.tomtalk.net/gallery">图床</a>
-        <a href="//wiki.tomtalk.net/wiki">wiki</a>
-        <a href="//go.tomtalk.net">别忘了</a>
-        <a href="//todo.tomtalk.net">GTD</a>
+        <a href="/blog">博客</a>
+        <a href="/gallery">图床</a>
+        <a href="//wiki.tomtalk.net">wiki</a>
+        <a href="/memo">别忘了</a>
+        <a href="/todo">GTD</a>
         <a href="/monitor.html">monitor</a>
     </div>
 

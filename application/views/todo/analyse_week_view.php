@@ -48,7 +48,7 @@
             <span style="margin-left: 6em;"><?= $user_name ?></span>
             <span style="margin-left: 3em;"><a href="/user/logout">Logout</a></span>
             <span style="float: right;">
-            <a class="btn btn-default btn-xs" href="/">周视图</a>
+            <a class="btn btn-default btn-xs" href="/todo">周视图</a>
             </span>
         </div>
     </div>

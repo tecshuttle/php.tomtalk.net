@@ -29,7 +29,7 @@
         <span style="margin-left: 3em;"><a href="/user/logout">Logout</a></span>
         <span style="margin-left: 12em;color:#ff1493;" id="week_range"></span>
         <span style="float: right;">
-            <a class="btn btn-default btn-xs" href="/?project_id=<?= $project_id ?>">周视图</a>
+            <a class="btn btn-default btn-xs" href="/todo?project_id=<?= $project_id ?>">周视图</a>
         </span>
     </div>
 

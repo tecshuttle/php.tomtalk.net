@@ -29,7 +29,7 @@
                     <option value="<?= $p->id ?>"><?= $p->name ?></option>
                 <?php endforeach; ?>
             </select>
-            <?php if ($project_id !== false): ?>
+            <?php if ($project_id !== null): ?>
                 <a class="btn btn-default btn-xs" href="/analyse/send_report_mail?project_id=<?= $project_id ?>"
                    id="send_report_mail">周报邮件</a>
             <?php endif; ?>
