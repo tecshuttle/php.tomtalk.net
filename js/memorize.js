@@ -28,7 +28,7 @@ if (devMode) {
     login_name = getCookie('name');
 
     if (uid !== undefined) {
-        window.location.href = '/#!list';
+        window.location.href = '/memo#!list';
     }
 }
 
@@ -377,7 +377,7 @@ var ContentView = Backbone.View.extend({
     add: function (row) {
         var item = new Item();
         item.set({
-            _id: row._id,
+            id: row.id,
             question: row.question,
             answer: row.answer,
             explain: row.explain,

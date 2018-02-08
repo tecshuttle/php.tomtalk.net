@@ -33,12 +33,4 @@ if ($_SERVER['HTTP_HOST'] != 'www.tomtalk.net') {
     $ga = '';
 }
 
-//初始化淘宝jssdk
-//tomtalk.net
-$app_key = '21277274'; /*填写appkey */
-$secret = '017d33be3926cb8afec7b7c1a13e4269'; /*填入Appsecret'*/
-
-//tuji360.com
-$app_key = '21195713'; /*填写appkey */
-$secret = '56bfe0f05a3bd942f5bbba7925421d06';/*填入Appsecret'*/
 //end file 

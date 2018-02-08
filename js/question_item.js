@@ -2,7 +2,7 @@
 
 var Item = Backbone.Model.extend({
     defaults: {
-        _id: 0,
+        id: 0,
         question: '#',
         answer: '',
         explain: '',
