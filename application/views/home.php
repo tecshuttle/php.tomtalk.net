@@ -89,7 +89,7 @@
 
 <div id="container">
     <div class="top-menu">
-        <a href="/blog">博客</a>
+        <a href="/ng">博客</a>
         <a href="/gallery">图床</a>
         <a href="//wiki.tomtalk.net">wiki</a>
         <a href="/memo">别忘了</a>
