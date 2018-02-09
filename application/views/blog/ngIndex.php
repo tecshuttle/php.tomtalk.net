@@ -3,7 +3,7 @@
 
 <script id="templates/home.html" type="text/ng-template">
     <div class="ng-tag">
-        <a href="//www.tomtalk.net"><span class="btn"><span style="color:#08C;" class="glyphicon glyphicon-home"></span></span></a>
+        <a href="/"><span class="btn"><span style="color:#08C;" class="glyphicon glyphicon-home"></span></span></a>
         <input type="text" ng-model="keyword" ng-change="search()" class="search form-control" placeholder="搜索" />
         <span ng-repeat="tag in tags | orderBy: 'total': true" ng-class="tag.tagged ? 'tagged': ''" ng-bind="tag.tag + ' ' + tag.total" ng-click="tagClick(tag)"></span>
         <a href="#edit/0" ng-show="user"><span class="btn"><span style="color:#84b76d;" class="glyphicon glyphicon-plus"></span></span></a>
