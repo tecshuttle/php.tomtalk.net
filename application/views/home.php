@@ -92,7 +92,7 @@
         <a href="/ng">博客</a>
         <a href="/gallery">图床</a>
         <a href="//wiki.tomtalk.net">wiki</a>
-        <a href="/memo">别忘了</a>
+        <a href="//go.tomtalk.net">别忘了</a>
         <a href="/todo">GTD</a>
         <a href="/monitor.html">monitor</a>
     </div>
@@ -103,8 +103,9 @@
 </div>
 
 <div id="footer">
-    本站由<a href="blog/user.php?uid=6">tecshuttle</a>制做，
-    并由<a href="blog/all_user.php">全体成员</a>贡献内容。{elapsed_time} sec.
+    <p>本站由<a href="blog/user.php?uid=6">tecshuttle</a>制做，
+        并由<a href="blog/all_user.php">全体成员</a>贡献内容。{elapsed_time} sec.
+    <p><a href="http://www.miitbeian.gov.cn">粤ICP备12087649号</a>
 </div>
 
 </body>
