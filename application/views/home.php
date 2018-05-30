@@ -103,9 +103,8 @@
 </div>
 
 <div id="footer">
-    <p>本站由<a href="blog/user.php?uid=6">tecshuttle</a>制做，
-        并由<a href="blog/all_user.php">全体成员</a>贡献内容。{elapsed_time} sec.
-    <p><a href="http://www.miitbeian.gov.cn">粤ICP备12087649号</a>
+    <a href="http://www.miitbeian.gov.cn">粤ICP备12087649号</a> - 本站由<a href="blog/user.php?uid=6">tecshuttle</a>制做，
+    并由<a href="blog/all_user.php">全体成员</a>贡献内容。{elapsed_time} sec.
 </div>
 
 </body>
