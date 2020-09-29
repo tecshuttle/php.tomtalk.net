@@ -2,11 +2,11 @@
 require_once('mqs.sdk.class.php');
 $mqs = new mqs(
     array(
-        'accessKeyId' => 'ga717WxlLMfcBezG',
-        'accessKeySecret' => 'HyYsmhnb4D2xjS1qQSlOdZn2XVrZq1',
-        'accessOwnerId' => 'hyoc74x7nw',
-        'accessQueue' => 'sendMail',
-        'accessRegion' => 'cn-hangzhou'
+        'accessKeyId' => '',
+        'accessKeySecret' => '',
+        'accessOwnerId' => '',
+        'accessQueue' => '',
+        'accessRegion' => ''
     )
 );
 
